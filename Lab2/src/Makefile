@@ -3,7 +3,7 @@ CC = gcc
 CFLAGS = -std=c99 -Wall -pedantic
 BIN = ../bin
 
-all: Number04_1 Number01_01
+all: Number04_1 Number01_01 Number02_01
 
 clean:
 	/bin/rm *.o $(BIN)/*
@@ -14,9 +14,9 @@ Number01_01: Number01_01.o $(OBJ)
 	$(CC) $(CFLAGS) -o Number01_01 Number01_01.o $(OBJ) -lm
 	mv Number01_01 $(BIN)
 
-# Number01_04: Number01_04.o $(OBJ)
-# 		$(CC) $(CFLAGS) -o Number01_04 Number01_04.o $(OBJ) -lm
-# 		mv Number01_04 $(BIN)
+Number02_01: Number02_01.o $(OBJ)
+		$(CC) $(CFLAGS) -o Number02_01 Number02_01.o $(OBJ) -lm
+		mv Number02_01 $(BIN)
 #
 # Number03: Number03.o $(OBJ)
 # 		$(CC) $(CFLAGS) -o Number03 Number03.o $(OBJ) -lm
